@@ -21,4 +21,4 @@ WORKDIR /
 COPY --from=builder /bin/sonic .
 USER 65532:65532
 
-ENTRYPOINT ["/bin/sh", "-c", "/bin/sonic"]
+ENTRYPOINT ["/bin/sonic"]
