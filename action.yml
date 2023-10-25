@@ -1,0 +1,14 @@
+name: 'Sonic'
+description: 'Soooooooooonic'
+inputs:
+  pr-number:
+    description: 'PR number'
+    required: true
+    default: '0'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - '-pr-number'
+    - ${{ inputs.pr-number }}
