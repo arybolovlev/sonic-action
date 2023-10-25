@@ -37,6 +37,6 @@ func main() {
 	}
 
 	for _, f := range files {
-		fmt.Println(*f.Filename)
+		fmt.Println(*f.Filename, *f.Status)
 	}
 }
