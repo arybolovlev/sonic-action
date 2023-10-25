@@ -17,7 +17,7 @@ RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} go build -a -o so
 # Build image
 FROM gcr.io/distroless/static:nonroot
 
-WORKDIR /
+WORKDIR /bin
 COPY --from=builder /bin/sonic .
 USER 65532:65532
 
